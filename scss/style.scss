@@ -1,12 +1,5 @@
-$color_1: #ffffff;
-$color_2: #000428;
-$font-family_1: 'Quicksand', sans-serif;
-$background-color_1: #032552;
-$background-color_2: #559cf9;
-$background-color_3: #C9D6FF;
-$background-color_4: #000428;
-$background-color_5: #0a71f7;
 
+@import "variables", "footer"; 
 /*-----Página de inicio-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Agregado de color al body*/
 /*Trabajo sobre el contenedor central y la imagen principal de la página de inicio*/
@@ -81,37 +74,7 @@ main {
 		max-width: 40%;
 	}
 }
-.logo_footer {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: $background-color_4;
-	img {
-		width: 18.75rem;
-	}
-}
-.redes_sociales {
-	margin: 1.25rem;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	li {
-		background-color: $background-color_4;
-		list-style: none;
-		text-decoration: none;
-		margin: 0.625rem;
-	}
-	a {
-		padding: 0.3125rem;
-	}
-	img {
-		width: 1.5625rem;
-		height: 1.5625rem;
-		margin-right: 0.625rem;
-	}
-}
+
 .contenedor_central_derecholibre {
 	justify-content: center;
 	align-items: center;
@@ -121,93 +84,10 @@ main {
 	align-items: center;
 	display: grid;
 	grid-template-columns: 40% 40%;
+
+	
 }
-.formulario_ingresoconsulta {
-	border-radius: 0.5rem;
-	font-size: 1.25rem;
-	color: $color_1;
-	display: grid;
-	grid-template-columns: 80%;
-}
-#textoprincipal_formulario {
-	font-weight: bold;
-	margin: 0.1875rem;
-}
-#lista_temas {
-	text-align: center;
-	border: 0.125rem solid #000428;
-	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.0625rem;
-	border-radius: 0.5rem;
-	margin-bottom: 0.625rem;
-}
-#area_texto {
-	border-radius: 0.5rem;
-	margin-bottom: 0.625rem;
-	border: 0.125rem solid #000428;
-	box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.0625rem;
-	padding: 0.3125rem;
-	background-color: $background-color_3;
-}
-.botones1_2 {
-	display: flex;
-	justify-content: space-evenly;
-	input {
-		border: 0.125rem solid #032552;
-		border-radius: 0.5rem;
-		width: 20%;
-		height: 150%;
-	}
-}
-.advertencia_consulta {
-	border-radius: 1.875rem;
-	max-width: 31.25rem;
-	display: grid;
-	grid-template-columns: 60% 40%;
-	height: 31.25rem;
-	align-items: center;
-	box-shadow: 0.3125rem 0.3125rem 1.25rem #000428;
-	transition: all 300ms ease;
-	&:hover {
-		transform: scale(1.1);
-	}
-	h3 {
-		font-size: 1.25rem;
-	}
-	h1 {
-		margin-bottom: 0.625rem;
-		font-size: 2.5rem;
-	}
-	p {
-		font-size: 1.25rem;
-	}
-}
-.advertencia_datos {
-	height: 100%;
-	width: 100%;
-	display: grid;
-	align-items: center;
-	text-align: center;
-	border-top-left-radius: 0.9375rem;
-	border-bottom-left-radius: 0.9375rem;
-	background: #C9D6FF;
-	background: -webkit-linear-gradient(to bottom, #E2E2E2, #C9D6FF);
-	background: linear-gradient(to bottom, #E2E2E2, #C9D6FF);
-}
-.imagen_article {
-	display: grid;
-	align-items: center;
-	height: 100%;
-	width: 100%;
-	border-top-right-radius: 0.9375rem;
-	border-bottom-right-radius: 0.9375rem;
-	background: #2193b0;
-	background: -webkit-linear-gradient(to bottom, #6dd5ed, #2193b0);
-	background: linear-gradient(to bottom, #6dd5ed, #2193b0);
-}
-#imagen_advertencia_consulta {
-	width: 12.5rem;
-	height: 12.5rem;
-}
+
 .contenedor_central_respuesta {
 	background-color: $background-color_2;
 	justify-content: center;

@@ -47,37 +47,46 @@
     </nav>
     <!--Contendor con el formulario de ingreso y la advertencia-->
     <main class="contenedor_central_consulta">
-        <!--Contendor con el formulario de ingreso para consultar-->
-        <form class="formulario_ingresoconsulta">
-            <label id="textoprincipal_formulario">Selecciona el tema de consulta</label>
-            <input id="lista_temas" list="temas_consulta" name="list" />
-            <datalist id="temas_consulta">
-                <option label="Trabajo" value="Trabajo">
-                <option label="Familia" value="Familia">
-                <option label="Jubilación" value="Jubilación">
-                <option label="Divorcio" value="Divorcio">
-            </datalist>
-            <textarea name="añadir_informacion_consulta" id="area_texto"
-                placeholder="Añada información sobre su consulta..." cols="50" rows="20"></textarea>
-            <div class="botones1_2">
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpiar">
-            </div>
-        </form>
 
-        <section class="advertencia_consulta">
-            <article class="advertencia_datos">
-                <h2>ADVERTENCIA</h2>
-                <h3>¡RECUERDA!</h3>
-                <p>La información que proveas sobre tu caso será visible. Por lo tanto, evita publicar información
-                    sensible que te pueda identificar directamente. </p>
-                <P>PRESERVA TU ANONIMATO</P>
-            </article>
-            <div class="imagen_article">
-                <img id="imagen_advertencia_consulta" src="../imagenes/imagen1_advertencia.png"
-                    alt="Imagen que acompaña la advertencia, representativa de imagen de derecho.">
-            </div>
-        </section>
+        <div class="form-floating col-md-10 col-lg-10 col-xl-10 mx-auto mt-10">
+            <form class="row g-3">
+                <div class="mb-3">
+                    <label for="control_input1" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="control_input1" placeholder="usuario@ejemplo.com">
+                </div>
+
+                <div class="mb-3">
+                    <label for="contraseña_input" class="visually-hidden">Contraseña</label>
+                    <input type="password" class="form-control" id="contraseña_input" placeholder="Contraseña">
+                </div>
+
+                <select class="form-select" id="lista_desplegable" aria-label="Lista de temas de consulta">
+                    <option selected>Selecciona un tema de consulta</option>
+                    <option value="1">Trabajo</option>
+                    <option value="2">Jubilación</option>
+                    <option value="3">Jubilación</option>
+                    <option value="4">Divorcio</option>
+                </select>
+                <div class="mb-3">
+                    <label for="formulario_textarea" class="form-label">Área de consulta</label>
+                    <textarea class="form-control" id="formulario_textarea  " rows="15"
+                        placeholder="Ingresa tu consulta aquí..."></textarea>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Enviar consulta</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="container d-flex flex-column justify-content-center">
+            <figure class="figure d-flex justify-content-center">
+                <img src="../imagenes/imagen1_advertencia.png" class="figure-img img-fluid rounded"
+                    alt="Imagen de mujer con los ojos vendados.">
+            </figure>
+            <p class="text-justify text-white font-weight-bold text-center">La información que proveas sobre tu caso será
+                visible. Por lo tanto, evita publicar información
+                sensible que te pueda identificar directamente. PRESERVA TU ANONIMATO </p>
+        </div>
     </main>
     <!--Pie de página que incluye redes sociales y descargo de responsabilidad-->
     <footer class="bg-dark text-white pt-5 pb-4">
