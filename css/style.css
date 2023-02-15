@@ -140,6 +140,12 @@ main {
   align-items: center;
 }
 
+@media screen and (max-width: 1024px) {
+  .contenedor_central_estadisticas {
+    height: auto;
+    display: grid;
+  }
+}
 .tarjeta {
   position: relative;
   width: 18.75rem;

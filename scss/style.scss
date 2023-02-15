@@ -112,8 +112,13 @@ main {
 .contenedor_central_estadisticas {
 	background-color: $background-color_5;
 	justify-content: center;
-	align-items: center;
+	align-items: center;}
+@include media-down(lg){
+	.contenedor_central_estadisticas{
+	height: auto;
+	display: grid;}
 }
+
 
 .tarjeta {
 	position: relative;
