@@ -46,47 +46,60 @@
     </nav>
     <!--Contendor con la tabla de consultas y la advertencia-->
     <main class="contenedor_central_respuesta">
-        <!--Contendor con la tabla de consultas para responder-->
-        <div class="contenedor_respuestas">
-            <label id="textoprincipal_respuesta">Selecciona el tema de respuesta</label>
-            <input id="lista_temas" list="temas_consulta" name="list" />
-            <datalist id="temas_consulta">
-                <option label="Trabajo" value="Trabajo">
-                <option label="Familia" value="Familia">
-                <option label="Jubilación" value="Jubilación">
-                <option label="Divorcio" value="Divorcio">
-            </datalist>
-            <table class="tabla_consultas">
-                <tr>
-                    <th>Tema</th>
-                    <th>ID</th>
-                    <th>Pregunta</th>
-                    <th>Respondida</th>
-                </tr>
-                <tr>
-                    <td>Trabajo</td>
-                    <td>13213</td>
-                    <td>¿Me corresponde aguinaldo?</td>
-                    <td>no</td>
-                </tr>
-                <tr>
-                    <td>Jubilación</td>
-                    <td>14563</td>
-                    <td>¿Me corresponde aguinaldo?</td>
-                    <td>no</td>
-                </tr>
-                <tr>
-                    <td>Familia</td>
-                    <td>213</td>
-                    <td>¿Me corresponde aguinaldo?</td>
-                    <td>no</td>
-                </tr>
-            </table>
-            <div class="boton3">
-                <input type="submit" value="Responder">
-            </div>
+        <div data-aos="zoom-out-up" class="table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
+        <table class="table table-dark table-hover ">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Tema</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Pregunta</th>
+                <th scope="col">Respondida</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Trabajo</td>
+                <td>@pablo</td>
+                <td>¿Me corresponde aguinaldo?</td>
+                <td>NO</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jubilación</td>
+                <td>@jose</td>
+                <td>¿Me corresponde jubilarme con mi edad?</td>
+                <td>SI</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Familia</td>
+                <td>@agustina</td>
+                <td>¿Me corresponde asignación familiar?</td>
+                <td>SI</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Trabajo</td>
+                <td>@camila</td>
+                <td>¿Me corresponde una indemnización por despido?</td>
+                <td>SI</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <!--Sección que incluye la advertencia para los usuarios con el uso responsable de la página-->
+
+        <div data-aos="zoom-out-up" class="advertencia1 container d-flex flex-column justify-content-center">
+            <figure class="figure col-md-6 col lg-6 col-xl-6 mx-auto mt-6">
+                <img src="../imagenes/imagen1_advertencia.png" class="figure-img img-fluid rounded"
+                    alt="A generic square placeholder image with rounded corners in a figure.">
+            </figure>
+            <p class="text-justify text-white font-weight-bold text-center">Documentate antes de responder cualquier duda, 
+                la comunidad necesita de una colaboración honesta y
+                bien intencionada. COLABORA RESPONSABLEMENTE </p>
+        </div>
+        <!--Sección que incluye la advertencia para los usuarios con el uso responsable de la página
         <section class="advertencia_consulta">
             <article class="advertencia_datos">
                 <h2>ADVERTENCIA</h2>
@@ -99,7 +112,7 @@
                 <img id="imagen_advertencia_consulta" src="../imagenes/imagen1_advertencia.png"
                     alt="Imagen que acompaña la advertencia, representativa de imagen de derecho.">
             </div>
-        </section>
+        </section>-->
     </main>
     <!--Pie de página que incluye redes sociales y descargo de responsabilidad-->
     <footer class="bg-dark text-white pt-5 pb-4">

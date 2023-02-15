@@ -1,9 +1,18 @@
 //Variables aplicadas en css
+//Colores
 $color_1: #ffffff;
 $color_2: #000428;
+//Fuente
 $font-family_1: 'Quicksand', sans-serif;
+//Fondos
 $background-color_1: #032552;
 $background-color_2: #559cf9;
 $background-color_3: #C9D6FF;
 $background-color_4: #000428;
 $background-color_5: #0a71f7;
+//Puntos de quiebre
+$breakpoints: (
+    lg: 1024px,
+    md: 768px,
+    sm: 540px 
+);

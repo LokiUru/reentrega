@@ -1,44 +1,15 @@
+@import "variables", "footer", "mixin";
 
-@import "variables", "footer"; 
-/*-----Página de inicio-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Agregado de color al body*/
-/*Trabajo sobre el contenedor central y la imagen principal de la página de inicio*/
-/*Trabajo sobre imagen central de la página de inicio*/
-/*Sección de información implementada con bootstrap y css*/
-/*Media query que permite adaptar las cards de la sección cuando el dispositivo es  más pequeño*/
-/*Pie de página*/
-/*Trabajo sobre el logo incluido en el footer de la página*/
-/*Cotiene los enlaces a redes sociales*/
-/*-----Página ¿Por qué Derecho Libre?---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Trabajo sobre aspecto general del contenedor*/
-/*-----Página Consultar---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Aspectos generales del contenedor que aloja el formulario de consulta*/
-/*Trabajo aspectosgenerales del formulario de consulta*/
-/*Trabajo sobre área de texto*/
-/*Trabajo botones de formulario consulta*/
-/*Trabajo sobre advertencia a la derecha del contenedor central. También se aplica esta clase a la advertencia ubicada en la página foro.html*/
-/*Animación de cambio de tamaño para advertencia*/
-/*-----Página Foro---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Aspectos generales del contenedor que contiene la tabla y la advertencia*/
-/*Ubicado del lado izquierdo, contiene tabla, lista desplegable y botón*/
-/*Trabajo sobre la tabla*/
-/*Trabajo sobre el botón responder*/
-/*Trabajo sobre advertencia a la derecha del contenedor central*/
-/*-----Página Estadísticas---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Aspectos generales del contenedor central*/
-/*Trabajo sobre las tarjetas informativas*/
-/*Aspecto general de las cartas*/
-/*Trabajo sobre la parte frontal de las cartas*/
-/*Trabajo sobre la parta trasera de las cartas*/
-/*Animación de rotación de las cartas*/
 * {
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	background-color: $background-color_1;
 	font-family: $font-family_1;
 }
+
 main {
 	background: rgb(2, 0, 36);
 	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
@@ -48,10 +19,12 @@ main {
 	justify-content: center;
 	align-items: center;
 }
+
 .imagen_central {
 	width: 500px;
 	height: 500px;
 }
+
 .card-deck {
 	background-color: $background-color_2;
 	height: 100%;
@@ -59,6 +32,7 @@ main {
 	align-items: center;
 	justify-content: space-between;
 }
+
 .card {
 	max-width: 30%;
 	height: 480px;
@@ -69,146 +43,13 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 	img {
 		margin-top: 5%;
 		max-width: 40%;
 	}
 }
 
-.contenedor_central_derecholibre {
-	justify-content: center;
-	align-items: center;
-}
-.contenedor_central_consulta {
-	justify-content: center;
-	align-items: center;
-	display: grid;
-	grid-template-columns: 40% 40%;
-
-	
-}
-
-.contenedor_central_respuesta {
-	background-color: $background-color_2;
-	justify-content: center;
-	align-items: center;
-}
-.contenedor_respuestas {
-	width: 25rem;
-	margin-right: 5rem;
-}
-#textoprincipal_respuesta {
-	font-weight: bold;
-	text-align: left;
-	margin-bottom: 0.1875rem;
-}
-.tabla_consultas {
-	background-color: $background-color_2;
-	margin-top: 0.625rem;
-	border-collapse: collapse;
-	border: 0.125rem solid #ffff;
-	letter-spacing: 0.0625rem;
-	td {
-		border: 0.125rem solid #ffff;
-		padding: 0.9375rem;
-	}
-}
-th {
-	border: 0.125rem solid #ffff;
-	padding: 0.9375rem;
-}
-.boton3 {
-	input {
-		border: 0.125rem solid #ff9040;
-		border-radius: 0.5rem;
-		margin: 0.4375rem;
-		width: 5rem;
-		height: 1.5625rem;
-	}
-}
-.advertencia_respuesta {
-	border: 0.5rem solid #ff9040;
-	border-radius: 0.625rem;
-	padding: 0.3125rem;
-	margin: 3.125rem;
-	max-width: 31.25rem;
-	justify-content: right;
-	h3 {
-		font-size: 1.25rem;
-	}
-	h1 {
-		margin-bottom: 0.625rem;
-		font-size: 2.5rem;
-	}
-	p {
-		text-align: justify;
-		color: $color_1;
-		font-size: 1.25rem;
-	}
-}
-.contenedor_central_estadisticas {
-	background-color: $background-color_5;
-	justify-content: center;
-	align-items: center;
-}
-.tarjeta {
-	position: relative;
-	width: 18.75rem;
-	height: 25rem;
-	margin: 3.125rem;
-	.aspecto {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		backface-visibility: hidden;
-		border-radius: 1.25rem;
-		overflow: hidden;
-		transition: .5s;
-	}
-	.frente {
-		transform: perspective(600px) rotateY(0deg);
-		box-shadow: 0rem 0.3125rem 0.625rem #000428;
-		h3 {
-			color: $color_2;
-			width: 100%;
-			height: 30%;
-			font-size: 1.5625rem;
-			margin-top: 1.25rem;
-			position: absolute;
-			text-align: center;
-		}
-		img {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
-	.trasera {
-		transform: perspective(37.5rem) rotateY(180deg);
-		background-color: $background-color_3;
-		padding: 1.25rem;
-		color: $color_2;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		text-align: center;
-		p {
-			position: absolute;
-			text-align: left;
-			justify-content: center;
-			font-size: 1rem;
-		}
-	}
-	&:hover {
-		.frente {
-			transform: perspective(37.5rem) rotateY(180deg);
-		}
-		.trasera {
-			transform: perspective(37.5rem) rotateY(360deg);
-		}
-	}
-}
 @media (max-width: 771px) {
 	.card-deck {
 		background-color: $background-color_2;
@@ -216,6 +57,7 @@ th {
 		display: grid;
 		align-items: center;
 	}
+
 	.card {
 		max-width: 100%;
 		height: 480px;
@@ -226,5 +68,116 @@ th {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+}
+
+.contenedor_central_derecholibre {
+	justify-content: center;
+	align-items: center;
+}
+
+.contenedor_central_consulta {
+	justify-content: center;
+	align-items: center;
+	display: grid;
+	grid-template-columns: 40% 40%;
+}
+
+@include media-down(lg) {
+	.contenedor_central_consulta {
+		grid-template-columns: 80% 0%;
+	}
+
+	.advertencia {
+		display: none !important;
+	}
+}
+
+.contenedor_central_respuesta {
+	justify-content: center;
+	align-items: center;
+	display: grid;
+	grid-template-columns: 40% 40%;}
+
+	@include media-down(lg) {
+		.contenedor_central_respuesta {
+			grid-template-columns: 80% 0%;
+		}
+
+		.advertencia1 {
+			display: none !important;
+		}
+	}
+
+.contenedor_central_estadisticas {
+	background-color: $background-color_5;
+	justify-content: center;
+	align-items: center;
+}
+
+.tarjeta {
+	position: relative;
+	width: 18.75rem;
+	height: 25rem;
+	margin: 3.125rem;
+
+	.aspecto {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+		border-radius: 1.25rem;
+		overflow: hidden;
+		transition: .5s;
+	}
+
+	.frente {
+		transform: perspective(600px) rotateY(0deg);
+		box-shadow: 0rem 0.3125rem 0.625rem #000428;
+
+		h3 {
+			color: $color_2;
+			width: 100%;
+			height: 30%;
+			font-size: 1.5625rem;
+			margin-top: 1.25rem;
+			position: absolute;
+			text-align: center;
+		}
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.trasera {
+		transform: perspective(37.5rem) rotateY(180deg);
+		background-color: $background-color_3;
+		padding: 1.25rem;
+		color: $color_2;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: center;
+
+		p {
+			position: absolute;
+			text-align: left;
+			justify-content: center;
+			font-size: 1rem;
+		}
+	}
+
+	&:hover {
+		.frente {
+			transform: perspective(37.5rem) rotateY(180deg);
+		}
+
+		.trasera {
+			transform: perspective(37.5rem) rotateY(360deg);
+		}
 	}
 }
