@@ -1,0 +1,114 @@
+/*Contenedor de la pàgina principal con cards informativas*/
+.card-deck {
+	background-color: $background-color_2;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card {
+	max-width: 30%;
+	height: 480px;
+	background-color: $background-color_3;
+	border-radius: 40px;
+	box-shadow: 0rem 5px 10px #000428;
+	margin: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img {
+		margin-top: 5%;
+		max-width: 40%;
+	}
+}
+
+@media (max-width: 771px) {
+	.card-deck {
+		background-color: $background-color_2;
+		height: 100%;
+		display: grid;
+		align-items: center;
+	}
+
+	.card {
+		max-width: 100%;
+		height: 480px;
+		background-color: $background-color_3;
+		border-radius: 40px;
+		box-shadow: 0px 5px 10px #000428;
+		margin: 35px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+/*Contenedor de la pàgina "Estadìsticas", contiene las cards con sus efectos y estilos*/
+
+.tarjeta {
+	position: relative;
+	width: 18.75rem;
+	height: 25rem;
+	margin: 3.125rem;
+
+	.aspecto {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+		border-radius: 1.25rem;
+		overflow: hidden;
+		transition: .5s;
+	}
+
+	.frente {
+		transform: perspective(600px) rotateY(0deg);
+		box-shadow: 0rem 0.3125rem 0.625rem #000428;
+
+		h2 {
+			color: $color_2;
+			width: 100%;
+			height: 30%;
+			font-size: 1.5625rem;
+			margin-top: 1.25rem;
+			position: absolute;
+			text-align: center;
+		}
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.trasera {
+		transform: perspective(37.5rem) rotateY(180deg);
+		background-color: $background-color_6;
+		padding: 1.25rem;
+		color: $color_1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-align: center;
+
+		p {
+			position: absolute;
+			text-align: left;
+			justify-content: center;
+			font-size: 1rem;
+		}
+	}
+
+	&:hover {
+		.frente {
+			transform: perspective(37.5rem) rotateY(180deg);
+		}
+
+		.trasera {
+			transform: perspective(37.5rem) rotateY(360deg);
+		}
+	}
+}

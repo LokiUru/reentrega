@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/*Trabajo sobre el footer de la web, en todas las html es el mismo*/
 .logo_footer {
   display: flex;
   align-items: center;
@@ -31,31 +33,17 @@
   margin-right: 0.625rem;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+/*Trabajo sobre la barra de navegación principal*/
+.barradenavegacion {
+  background-color: #090979;
 }
 
-body {
-  background-color: #032552;
-  font-family: "Quicksand", sans-serif;
+@media screen and (max-width: 1024px) {
+  .barradenavegacion h1 {
+    display: none;
+  }
 }
-
-main {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 35%, rgb(0, 212, 255) 100%);
-  width: 100%;
-  height: 850px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imagen_central {
-  width: 500px;
-  height: 500px;
-}
-
+/*Contenedor de la pàgina principal con cards informativas*/
 .card-deck {
   background-color: #559cf9;
   height: 100%;
@@ -99,53 +87,7 @@ main {
     justify-content: center;
   }
 }
-.contenedor_central_derecholibre {
-  justify-content: center;
-  align-items: center;
-}
-
-.contenedor_central_consulta {
-  justify-content: center;
-  align-items: center;
-  display: grid;
-  grid-template-columns: 40% 40%;
-}
-
-@media screen and (max-width: 1024px) {
-  .contenedor_central_consulta {
-    grid-template-columns: 80% 0%;
-  }
-  .advertencia {
-    display: none !important;
-  }
-}
-.contenedor_central_respuesta {
-  justify-content: center;
-  align-items: center;
-  display: grid;
-  grid-template-columns: 40% 40%;
-}
-
-@media screen and (max-width: 1024px) {
-  .contenedor_central_respuesta {
-    grid-template-columns: 80% 0%;
-  }
-  .advertencia1 {
-    display: none !important;
-  }
-}
-.contenedor_central_estadisticas {
-  background-color: #0a71f7;
-  justify-content: center;
-  align-items: center;
-}
-
-@media screen and (max-width: 1024px) {
-  .contenedor_central_estadisticas {
-    height: auto;
-    display: grid;
-  }
-}
+/*Contenedor de la pàgina "Estadìsticas", contiene las cards con sus efectos y estilos*/
 .tarjeta {
   position: relative;
   width: 18.75rem;
@@ -165,7 +107,7 @@ main {
   transform: perspective(600px) rotateY(0deg);
   box-shadow: 0rem 0.3125rem 0.625rem #000428;
 }
-.tarjeta .frente h3 {
+.tarjeta .frente h2 {
   color: #000428;
   width: 100%;
   height: 30%;
@@ -182,9 +124,9 @@ main {
 }
 .tarjeta .trasera {
   transform: perspective(37.5rem) rotateY(180deg);
-  background-color: #C9D6FF;
+  background-color: #090979;
   padding: 1.25rem;
-  color: #000428;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -201,6 +143,94 @@ main {
 }
 .tarjeta:hover .trasera {
   transform: perspective(37.5rem) rotateY(360deg);
+}
+
+/*Trabajo sobre aspectos generales del body*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #032552;
+  font-family: "Quicksand", sans-serif;
+}
+
+/*Trabajo sobre el contenedor central de la página principal que incluye la imagen principal, el card deck de la misma se 
+encuentra en un archivo aparte _cards.scss por practicidad.*/
+/*¡RECORDATORIO!.....Revisar el error de la línea 28.*/
+main {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 35%, rgb(0, 212, 255) 100%);
+  width: 100%;
+  height: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen_central {
+  width: 500px;
+  height: 500px;
+}
+
+/*Trabajo sobre el contenedor central de la html "Consultar"-------------------------------------------------------------*/
+.contenedor_central_derecholibre {
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor_central_consulta {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-areas: none;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .contenedor_central_consulta {
+    grid-template-areas: none;
+    grid-template-columns: 80% 0%;
+    grid-template-rows: auto;
+  }
+  .advertencia {
+    display: none !important;
+  }
+}
+/*Trabajo sobre el contenedor central de la html "Foro"-------------------------------------------------------------*/
+.contenedor_central_respuesta {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-areas: none;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .contenedor_central_respuesta {
+    grid-template-areas: none;
+    grid-template-columns: 80% 0%;
+    grid-template-rows: auto;
+  }
+  .advertencia1 {
+    display: none !important;
+  }
+}
+/*Trabajo sobre el contenedor central de la html "Estadìsticas", las cards se encuentran en el archivo "_cards.scss"-------------------------------------------------------------*/
+.contenedor_central_estadisticas {
+  background-color: #0a71f7;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .contenedor_central_estadisticas {
+    height: auto;
+    display: grid;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

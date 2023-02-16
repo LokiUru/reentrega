@@ -1,0 +1,12 @@
+@import "variables";
+/*Trabajo sobre la barra de navegación principal*/
+.barradenavegacion {
+    background-color: $background-color_6;
+    
+}
+
+@include media-down(lg) {
+    .barradenavegacion h1 {
+        display: none;
+    }
+}
