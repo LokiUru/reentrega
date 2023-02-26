@@ -74,32 +74,59 @@
                         <td>Trabajo</td>
                         <td>@pablo</td>
                         <td>¿Me corresponde aguinaldo?</td>
-                        <td>NO</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalrespuesta" data-bs-whatever="@mdo">Responder</button></td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>Jubilación</td>
                         <td>@jose</td>
                         <td>¿Me corresponde jubilarme con mi edad?</td>
-                        <td>SI</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalrespuesta" data-bs-whatever="@mdo">Responder</button></td></td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
                         <td>Familia</td>
                         <td>@agustina</td>
                         <td>¿Me corresponde asignación familiar?</td>
-                        <td>SI</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalrespuesta" data-bs-whatever="@mdo">Responder</button></td></td>
                     </tr>
                     <tr>
                         <th scope="row">4</th>
                         <td>Trabajo</td>
                         <td>@camila</td>
                         <td>¿Me corresponde una indemnización por despido?</td>
-                        <td>SI</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalrespuesta" data-bs-whatever="@mdo">Responder</button></td></td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <!--Modal-->
+        <div class="modal fade" id="modalrespuesta" tabindex="-1" aria-labelledby="modalrespuesta" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalrespuesta">Ingresar Respuesta</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="nombre_usuario_respuesta" class="col-form-label">Título:</label>
+                      <input type="text" class="form-control" id="nombre_usuario_respuesta">
+                    </div>
+                    <div class="mb-3">
+                      <label for="respuestaconsulta" class="col-form-label">Respuesta:</label>
+                      <textarea class="form-control" id="respuestaconsulta"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <input class="btn btn-primary" type="submit" value="Enviar">
+                </div>
+              </div>
+            </div>
+          </div>
         <!--Advertencia para usuarios-->
         <div data-aos="zoom-out-up" class="advertencia1 container d-flex flex-column justify-content-center">
             <!--Imagen de la advertencia-->
